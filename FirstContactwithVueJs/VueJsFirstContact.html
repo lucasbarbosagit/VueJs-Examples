@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+<!-- jquery for Bootstrap> -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr88LUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    
+<!-- bootstrap -->    
+<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+
+<!-- font awesome -->    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Vue.js script source -->        
+<script src="https://unpkg.com/vue/dist/vue.js"></script>    
+    
+<style>
+    .taskDone {
+        text-decoration: line-through;
+    }    
+    
+</style>    
+    
+<title>First contact with VueJs</title>    
+</head>
+<body>
+ <div class="container col-sm-8 col-sm-offset-2">
+    <div id="VueApp">
+     <h1>{{"Meu nome é " + name + " e eu tenho " + age + " anos"}}</h1>
+     </div>
+    </div>    
+    
+</body>
+<script>
+    
+    var VueApp = new Vue({
+        el: '#VueApp',
+        data: {
+            name: 'Lucas', age: '27'},
+        methods: {
+        }
+    });
+    
+    </script>
+</html>
