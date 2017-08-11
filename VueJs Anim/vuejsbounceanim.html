@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Vue.js Animations</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+    * {
+      font-family: sans-serif;
+    }
+    h1 {
+      display: inline-block;
+    }
+    @keyframes bounce {
+      0% {
+        transform: scale(0);
+      }
+      80% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .bounce-enter-active{
+      animation: bounce .5s;
+    }
+    .bounce-leave-active {
+      animation: bounce .5s reverse;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="show = !show">Toggle Visibility</button><br/>
+      <transition name="bounce">
+        <h1 v-show="show">{{ text }}</h1>
+      </transition>
+    </div>
+    <script>
+    new Vue({
+      el: '#app',
+      data: { text: 'Hello, World!', show: false }
+    })
+    </script>
+  </body>
+</html>
